@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 import os
 import environ
-from uteis import EnvProperty
+from uteis.constants import EnvProperty
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -174,3 +174,7 @@ LOGGING = {
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+LOGIN_URL="p/login/"
+LOGOUT_URL="p/logout/"
+LOGN_REDIRECT_URL="/"

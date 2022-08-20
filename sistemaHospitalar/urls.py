@@ -14,12 +14,12 @@ from atendimento.views.autenticacao.login import LoginView
 urlpatterns = [
     # LOGIN / LOGOUT 
     path('', IndexView.as_view(), name="index"),     
-    path('p/login', LoginView.as_view(), name='login'),    
+    path('p/login/', LoginView.as_view(), name='login'),    
     #path('p/logout', , name='logout'),  
      # ADMIN    
     path('admin/', admin.site.urls),
     ###
-    path('atendimento/', include('atendimento.urls'))
+    #path('atendimento/', include('atendimento.urls'))
 
 ]
 
