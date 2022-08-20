@@ -8,14 +8,14 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 ###
-from atendimento.views import LoginViews as viewLogin
-from atendimento.views import SelecionaModuloTemplateView
+from atendimento.views.index import IndexView
+from atendimento.views.autenticacao.login import LoginView
 
 urlpatterns = [
     # LOGIN / LOGOUT 
-    path('', SelecionaModuloTemplateView.as_view(), name="indexSistema"),     
-    path('p/login', viewLogin.newlogin, name='login'),    
-    path('p/logout', viewLogin.newlogout, name='logout'),  
+    path('', IndexView.as_view(), name="index"),     
+    path('p/login', LoginView.as_view(), name='login'),    
+    #path('p/logout', , name='logout'),  
      # ADMIN    
     path('admin/', admin.site.urls),
     ###
