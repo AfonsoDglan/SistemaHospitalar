@@ -1,0 +1,72 @@
+#!/bin/bash
+
+#
+# functions
+#
+
+cleanBuild() {
+	echo "Removing built files from 'static/'"
+	rm -rf static/*
+}
+
+runDocker() {
+	case $1 in
+		build)
+			./run build
+
+			echo "Building Docker image..."
+			docker build -t iserv .
+		;;
+		run)
+			echo "Starting Docker image..."
+			docker run -it -p 8000:8000 --env-file=docker/docker.env iserv
+		;;
+		*)
+			echo "Comando Docker não informado. Comandos disponíveis:"
+			echo " build => Constrói a imagem Docker na tag iserv:latest"
+			echo " run   => Roda a última imagem gerada usando as variáveis do arquivo [docker.env]"
+		;;
+	esac
+}
+
+#
+# main
+#
+
+case $1 in
+    build)
+        echo "Building app..."
+
+        # Para comprimir os estáticos deve-se desabilitar o modo debug.
+        export ISERV_DEBUG_MODE=False
+
+        cleanBuild
+
+        echo "Collecting static files..."
+        python manage.py collectstatic -c --no-input
+
+        #echo "Compressing static files..."
+        #python manage.py compress
+    ;;
+    clean)
+        cleanBuild
+    ;;
+    docker)
+        runDocker $2
+    ;;
+    help)
+        echo "No command provided. Available commands are:"
+        echo "       => sem parâmetros inicia a aplicação em modo dev"
+        echo " clean => limpa o diretório alvo de estáticos"
+        echo " build => executa a coleta dos estáticos, preparando para deploy."
+    ;;
+    *)
+        echo "Starting app in dev mode..."
+
+        cleanBuild
+
+        export ISERV_ENV_FILE=dev.env
+
+        python manage.py runserver 0.0.0.0:8010
+    ;;
+esac
