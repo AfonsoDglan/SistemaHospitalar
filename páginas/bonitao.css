@@ -1,7 +1,6 @@
 body {
 	
-	background : #000000;
-	display : flex;
+	background : #f2beb4;
 	
 }
 
@@ -13,12 +12,12 @@ body {
 	animation-duration : 2s;
 	animation-iteration-count : infinite;
 	
-	border : solid #00ff00;
+	border : solid #5b271d;
 	border-radius : 80px;
 	margin-left : 40px;
 	width : 25%;
 	height : 600px;
-	background : #000000;
+	background : #f5c99e;
 	display : flex;
 	flex-direction : column;
 	align-content : center;
@@ -31,25 +30,25 @@ body {
 	
 	0% {
 		
-		border : none;
+		background : #f2beb4;
 		
 	}
 	
 	90% {
 		
-		border : solid #00ff00;
+		background : #fcedcf;
 		
 	}
 	
 	95% {
 		
-		border : none;;
+		background : #f2beb4;
 		
 	}
 	
 	100% {
 		
-		border : solid #00ff00;
+		background : #fcedcf;
 		
 	}
 	
@@ -61,36 +60,36 @@ body {
 
 .icon {
 	
-	border : solid #00ff00;
+	border : solid #5b271d;
 	border-radius : 90px;
 	width : 150px;
 	height : 150px;
 	margin-top : 20px;
-	background : #000000;
+	background : #fbe9d8;
 	overflow : hidden;
 	
 }
 
 .draw {
 	
-	background : #00ff00;
+	background : #f5c99e;
 	width : 60px;
 	height : 60px;
 	margin : 0 auto;
 	margin-top : 30px;
-	border : solid #00ff00;
+	border : solid #5b271d;
 	border-radius : 30px;
 	
 }
 
 .drawb {
 	
-	background : #00ff00;
+	background : #f5c99e;
 	width : 120px;
 	height : 120px;
 	margin : 0 auto;
 	margin-top : 10px;
-	border : solid #00ff00;
+	border : solid #5b271d;
 	border-radius : 60px;
 	
 }
@@ -110,10 +109,10 @@ body {
 
 .input {
 	
-	background : #000000;
+	background : #fbe9d8;
 	width : 150%;
 	height : 60px;
-	border : solid #00ff00;
+	border : solid #5b271d;
 	border-radius : 10px;
 	text-align : center;
 	margin-top : 20px;
@@ -131,27 +130,22 @@ body {
 
 .butto {
 	
-	background : #000000;
+	background : #fbe9d8;
 	width : 80%;
 	height : 60px;
-	border : solid #00ff00;
+	border : solid #5b271d;
 	border-radius : 10px;
 	text-align : center;
 	margin-top : 20px;
 	transition : 0.25s;
-	color : #00ff00;
 	font-family : Corbel;
-	font-size : 20px;
 	
 }
 
 .butto:hover {
 	
 	width : 100%;
-	background : #00ff00;
-	color : #000000;
 	transition : 0.25s;
-	
 	
 }
 
@@ -165,44 +159,57 @@ body {
 
 .cmd {
 	
-	border : solid #00ff00;
+	border : solid #5b271d;
 	width : 55%;
 	height : 600px;
-	display : flex;
-	align-content : center;
-	flex-direction : column;
+	background : #c79d95;
 	
 }
 
 /* fim do css da tela de fundo*/
 
-/* inicio do css de botoes de prioridade reaproveitando o butto da tela de login*/
-
-.priority {
-	
-	display : flex;
-	flex-direction : column;
-	align-items : center;
-	
-}
-
-/* fim do css de botoes de prioridade*/
-
-/* css do texto grande da tela senhas*/
-
 .biggertext {
+	
+	animation-name : bugtitled;
+	animation-duration : 1s;
+	animation-iteration-count : infinite;
 	
 	font-size : 55px;
 	font-family : Gadugi;
 	font-weight : bold;
-	color: #00ff00;
+	color: #f2beb4;
 	margin-top : 20px;
+	background : #fcedcf;
+	border-radius : 40px;
 	
 }
 
-/* fim do css do texto grande*/
+.text {
+	
+	font-size : 55px;
+	font-family : Gadugi;
+	font-weight : bold;
+	color: #000000;
+}
 
-/* css do sinal de maior que fica piscando*/
+.texts {
+	
+	font-size : 30px;
+	font-family : Gadugi;
+	font-weight : lighter;
+	color: #000000;
+	margin-top : 90px;
+	margin-left : 80px;
+	display : block;
+}
+
+.linetext {
+	
+	font-size : 20px;
+	font-family : Gadugi;
+	font-weight : bold;
+	color: #fcedcf;
+}
 
 .line {
 	
@@ -210,10 +217,10 @@ body {
 	animation-duration : 1s;
 	animation-iteration-count : infinite;
 	
-	font-size : 40px;
+	font-size : 20px;
 	font-family : Gadugi;
 	font-weight : bold;
-	color: #00ff00;
+	color: #fcedcf;
 	
 }
 
@@ -221,63 +228,20 @@ body {
 	
 	0% {
 		
-		color : #000000;
+		color : #c79d95;
 		
 	}
 	
 	50% {
 		
-		color : #00ff00;
+		color : #fcedcf;
 		
 	}
 	
 	100% {
 		
-		color : #000000;
+		color : #c79d95;
 		
 	}
 	
 }
-
-/* fim do css do sinal piscando*/
-
-/* css da palavra fila piscando*/
-
-.bugline {
-	
-	animation-name : bugline;
-	animation-duration : 1s;
-	animation-iteration-count : infinite;
-	
-	font-size : 55px;
-	font-family : Gadugi;
-	font-weight : bold;
-	color: #00ff00;
-	margin-top : 20px;
-	display : block;
-	
-}
-
-@keyframes bugline {
-	
-	50% {
-		
-		color : #000000;
-		background : #00ff00;
-		
-	}
-	
-}
-
-/* fim do css da palavra fila */
-
-/* css centralizando a palavra grande da tela de senha*/
-
-.centerdiv {
-	
-	display : block;
-	margin : 0 auto;
-	
-}
-
-/* fim do css centralizando */
