@@ -247,6 +247,13 @@ body {
 }
 
 /*Css da pagina do medico*/
+
+.medbody {
+	background : #f2beb4;
+	display : flex;
+	justify-content : space-between;
+}
+
 .medbutto{
 	background : #f2beb4;
 	width : 80%;
