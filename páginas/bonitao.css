@@ -326,3 +326,50 @@ body {
 	color: #ffffff;
 }
 /*fim do medico*/
+
+/*css da enfermeira*/
+
+.enfinput {
+	background : #000000;
+	width : 50%;
+	height : 50px;
+	border : solid #00ff00;
+	border-radius : 10px;
+	text-align : start;
+	font-family : Gadugi;
+	font-size: 16;
+	color: #00ff00;
+}
+
+.enflinetext {
+	
+	font-size : 20px;
+	font-family : Gadugi;
+	font-weight : bold;
+	color: #00ff00;
+	margin-left : 10px;
+	width: 10px;
+}
+
+.enfbutto {
+	
+	background : #000000;
+	width : 100%;
+	height : 60px;
+	border : solid #00ff00;
+	border-left: #000000;
+	border-right:#000000;
+	text-align : center;
+	margin-top : 20px;
+	transition : 0.25s;
+	color : #00ff00;
+	font-family : Corbel;
+	font-size : 20px;
+	
+}
+
+.enfbutto:hover {
+	background : #00ff00;
+	color : #000000;
+	transition : 0.25s;
+}
