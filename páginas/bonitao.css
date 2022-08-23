@@ -373,3 +373,86 @@ body {
 	color : #000000;
 	transition : 0.25s;
 }
+
+/* inicio da navbar e do texto da tela principal, utilizando o butto para os botoes e a classe line para o > piscando*/
+
+.nav {
+	
+	animation-name : shownav;
+	animation-duration : 2s;
+	
+	display : flex;
+	flex-direction : row;
+}
+
+@keyframes shownav {
+	
+	0% {
+		
+		margin-top : -95px;
+		
+	}
+	
+}
+
+.texttypper {
+	
+	animation-name : typpe;
+	animation-duration : 2s;
+	
+	font-size : 55px;
+	font-family : Gadugi;
+	font-weight : bold;
+	color: #00ff00;
+	margin-top : 250px;
+	
+}
+
+@keyframes typpe{
+	
+	0% {
+		
+		margin-top : 500px;
+		
+	}
+	
+	
+}
+
+/* fim do css da tela principal*/
+
+/* css do monitor, este css herda a classe cmd para o retangulo grande e a classe line para o efeito do > piscando*/
+
+/* a class password é da div que está englobando as senhas passadas */
+
+.password {
+	
+	width : 30%;
+	
+}
+
+.passwords {
+	
+	border : solid #00ff00;
+	width : 80%;
+	height : 200px;
+	font-size : 40px;
+	font-family : Gadugi;
+	font-weight : bold;
+	color: #00ff00;
+	
+}
+
+/* fim do css das senhas menores, o css de baixo é para digitar a senha grande*/
+
+
+.bigpassword {
+	
+	font-size : 100px;
+	font-family : Gadugi;
+	font-weight : bold;
+	color: #00ff00;
+	
+}
+
+/* fim do css do monitor*/
