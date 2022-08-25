@@ -1,0 +1,40 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block static_css %}
+<link rel="stylesheet" href="{% static 'css/consulta.css' %}">
+{% endblock %}
+{% block conteudo %}
+<div class = "medquest"> 
+    <div>
+        <button class = "medbutto" onclick="location.href=`{% url 'atendimento:consulta'%}`">Chamar Próximo</button>
+    </div>
+</div>
+
+<form method="POST" action="." class = "cmd"> 
+    <a class = "biggertext">>Descrição da triagem</a><br><br>
+	<!--deixei em branco a parte em frente aos nome pois depende da recuperação dos dados do bd-->
+	<a class = "medlinetext">Nome Do Paciente: {{nomePaciente}}</a><br><br>
+	<a class = "medlinetext">Queixas Do Paciente: {{queixa}}</a><br><br>
+	<a class = "medlinetext">Historico Breve: {{historico}}</a><br><br>
+	<a class = "medlinetext">Observações do Enfermeiro(a): {{obs}}</a><br><br>
+    <a class = "medlinetext">Dor: {{dor}}</a><br><br>
+    <a class = "medlinetext">Frequência Cardiaca: {{fc}}</a><br><br>
+    <a class = "medlinetext">Frequência Respiratoria: {{fr}}</a><br><br>
+    <a class = "medlinetext">Pressao Arterial: {{pa}}</a><br><br>
+    <a class = "medlinetext">temperatura: {{temp}}</a><br><br>
+    {% csrf_token %}
+    {% for field in form %}
+        <label for="{{ field.name }}" class = "medlinetext">{{ field.label }}: </label>
+        {{ field }}
+    {% endfor %}
+    {% if form%}
+    <div class="priority" >
+        <input class = "butto" type = "submit" value = "Enviar" style="font-weight:bold">
+    </div>
+    {% endif %}
+    {% if error %}
+        <span style="color: red;">{{ error }}</span>
+        <br><br>
+    {% endif %}
+</form>
+{% endblock%}
