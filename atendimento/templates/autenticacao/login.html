@@ -1,15 +1,42 @@
-<form method="POST" action="{% url 'login' %}">
-    {% csrf_token %}
-    
-    {% for field in form %}
-        <b>{{ field.label }}</b>: {{ field }}
-        <br><br>
-    {% endfor %}
+{% extends 'base.html'%}
+{% load static %}
+{% block static_css %} 
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+{% endblock %}
+{% block title%} Login{% endblock %}
+{% block conteudo %}
+<div class = "line"> 
+		
+    >
 
-    {% if error %}
-        <span style="color: red;">{{ error }}</span>
-        <br><br>
-    {% endif %}
+</div>
+<div class = "card"> 
+    <div class = "icon">
     
-    <input type="submit" value="Enviar" />
-</form>
+        <div class = "draw">
+        
+        </div>
+        
+        <div class = "drawb">
+        
+        </div>
+    
+    </div>
+    
+    <form method="POST" action="{% url 'login' %}" class = "quest"> 
+        {% csrf_token %}
+        {% for field in form %}
+            {{ field }}
+        {% endfor %}
+
+        {% if error %}
+            <span style="color: red;">{{ error }}</span>
+            <br><br>
+        {% endif %}
+        
+        <input class = "butto" type = "submit" value = "login">
+    
+    </form>
+
+</div>
+{% endblock%}

@@ -1,0 +1,27 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block static_css %} 
+<link rel="stylesheet" href="{% static 'css/pedirSenha.css' %}">
+{% endblock %}
+{% block conteudo %}
+<div class = "cmd"> 
+		
+    <a class = "biggertext"> > Emissâo de senhas :  </a>
+    
+    <div class = "priority">
+    
+        <button class = "butto" onclick="location.href=`{% url 'atendimento:senhaPreferencial'%}`"> Prioritária </button>
+        <button class = "butto" onclick="location.href=`{% url 'atendimento:senhaConvencional'%}`">  Normal </button>
+    
+    </div>
+    
+    <a class = "line"> > </a>
+
+</div>
+
+<div class = "centerdiv"> 
+    
+        <a class = "biggertext"> Já já você  <br> entra na </a> <a class = "bugline"> fila </a>
+    
+</div>
+{% endblock%}

@@ -1,5 +1,5 @@
 class EnvProperty:
-
+    
     ENV_FILE = 'ISERV_ENV_FILE'
     SECRET_KEY = 'ISERV_SECRET_KEY'
     DEBUG_MODE = 'ISERV_DEBUG_MODE'

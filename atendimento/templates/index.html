@@ -1,1 +1,26 @@
-olá, {{ request.user.username }}
+{% extends 'base.html'%}
+{% load static %}
+{% block static_css %} 
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% endblock %}
+{% block conteudo %}
+<div> 
+		
+    <div class = "nav"> 
+    
+        <button class = "butto" > monitor </button>
+        <button class = "butto" onclick="location.href=`{% url 'atendimento:pedirSenha'%}`"> paciente </button>
+        <button class = "butto" onclick="location.href=`{% url 'login'%}`"> login </button>
+    
+    </div>
+    
+    <div class = "texttypper"> 
+    
+        Bug hospital, achando o que tem de errado no seu corpo;
+    
+    </div>
+    
+    <div class = "line"> > </div>
+
+</div>
+{% endblock%}

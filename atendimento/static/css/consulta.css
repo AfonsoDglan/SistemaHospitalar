@@ -1,0 +1,88 @@
+.cmd {
+	
+	border : solid #00ff00;
+	width : 55%;
+	height : 98vh;
+	display : flex;
+	align-content : center;
+	flex-direction : column;
+	
+}
+.medbutto{
+	background : #000000;
+	width : 100%;
+	height : 80px;
+	border : solid #00ff00;
+	border-radius : 15px;
+	text-align : center;
+	margin-top : 225px;
+	transition : 0.25s;
+	font-family : Corbel;
+	font-size : 30px;
+	font-family : Gadugi;
+	font-weight : bold;
+	color: #00ff00;
+}
+
+.medbutto:hover {
+	color:#000000;
+	background: #00ff00;
+	transition : 0.25s;
+
+	
+}
+
+.medlinetext {
+	
+	font-size : 20px;
+	font-family : Gadugi;
+	font-weight : bold;
+	color: #00ff00;
+	margin-left : 30px;
+	
+}
+
+.medtextbox {
+	border : solid #00ff00;
+	margin-left : 20px;
+	border-radius : 10px;
+	width : 94%;
+	height : 170px;
+	background : none;
+	display : block;
+	color: #ffffff;
+}
+.biggertext {
+	
+	font-size : 55px;
+	font-family : Gadugi;
+	font-weight : bold;
+	color: #00ff00;
+	margin-top : 20px;
+	
+}
+.butto {
+	
+	background : #000000;
+	width : 80%;
+	height : 60px;
+	border : solid #00ff00;
+	border-radius : 10px;
+	text-align : center;
+	margin-top : 20px;
+	transition : 0.25s;
+	color : #00ff00;
+	font-family : Corbel;
+	font-size : 20px;
+	
+}
+
+.butto:hover {
+	
+	width : 100%;
+	background : #00ff00;
+	color : #000000;
+	transition : 0.25s;
+	
+	
+}
