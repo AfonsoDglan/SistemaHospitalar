@@ -1,11 +1,7 @@
-
-
-# https://stackoverflow.com/questions/58866132/django-multiple-databases-connections
-#if model._meta.app_label in ['auth', 'django', 'sessions', 'admin']:
 import random
 
 
-app_leituras = ['auth','admin','authtoken','contenttypes','site','django', 'cadastrorh', 'academicocad','permissoes']
+app_leituras = ['auth','admin','authtoken','contenttypes','site','django']
 app_escritas = ['submissaoacad',]
 auth_db = 'db_passo'
 pltaforma_db = 'default'
