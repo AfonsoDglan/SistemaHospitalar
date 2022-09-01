@@ -5,7 +5,7 @@
 import random
 
 
-app_leituras = ['auth','admin','contenttypes','site','django', 'cadastrorh', 'academicocad','permissoes']
+app_leituras = ['auth','admin','contenttypes','site','django']
 app_escritas = ['eventos',]
 auth_db = 'db_passo'
 pltaforma_db = 'db_plataforma'

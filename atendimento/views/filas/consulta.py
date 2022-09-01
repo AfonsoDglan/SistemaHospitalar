@@ -27,9 +27,9 @@ class ConsultaView(LoginRequiredMixin,TemplateView):
         elif Triagem.objects.filter(classificacao=3,estado=1).count() != 0:
             triagem = Triagem.objects.filter(classificacao=3,estado=1)[0]
         elif Triagem.objects.filter(classificacao=4,estado=1).count() != 0:
-            triagem = Triagem.objects.filter(classificacao=1,estado=1)[0]
+            triagem = Triagem.objects.filter(classificacao=4,estado=1)[0]
         elif Triagem.objects.filter(classificacao=5,estado=1).count() != 0:
-            triagem = Triagem.objects.filter(classificacao=1,estado=1)[0]
+            triagem = Triagem.objects.filter(classificacao=5,estado=1)[0]
         else:
             raise "No Momento Não Temos Paciente Na Triagem Para Ser Atendido"
         context = {'form': form,
@@ -56,9 +56,9 @@ class ConsultaView(LoginRequiredMixin,TemplateView):
             elif Triagem.objects.filter(classificacao=3,estado=1).count() != 0:
                 triagem = Triagem.objects.filter(classificacao=3,estado=1)[0]
             elif Triagem.objects.filter(classificacao=4,estado=1).count() != 0:
-                triagem = Triagem.objects.filter(classificacao=1,estado=1)[0]
+                triagem = Triagem.objects.filter(classificacao=4,estado=1)[0]
             elif Triagem.objects.filter(classificacao=5,estado=1).count() != 0:
-                triagem = Triagem.objects.filter(classificacao=1,estado=1)[0]
+                triagem = Triagem.objects.filter(classificacao=5,estado=1)[0]
             else:
                 raise "Não temos mais pacientes na triagem"
             triagem = Triagem.objects.get(id=triagem.id)
